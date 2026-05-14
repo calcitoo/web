@@ -1,0 +1,11 @@
+function Catalogo() {
+  return (
+    <div>
+        <h2>    
+            CUENTA
+        </h2>
+     
+    </div>
+  )
+}
+export default Catalogo
