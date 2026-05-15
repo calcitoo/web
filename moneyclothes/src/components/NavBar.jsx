@@ -5,9 +5,9 @@ import { useState, useEffect } from 'react'
 
 
 function NavBar() {
-  const [esMovil, setEsMovil] = useState(window.innerWidth < 768)
+  const [esMovil, setEsMovil] = useState(window.innerWidth < 1200)
   useEffect(() => {
-    const handleResize = () => setEsMovil(window.innerWidth < 768)
+    const handleResize = () => setEsMovil(window.innerWidth < 1200)
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
@@ -26,7 +26,9 @@ return (
     </div>
 
     <div style={{ flex: 1, display: 'flex', justifyContent: 'center'}}>
-      <img src={logo} style={{ width: '200px', height: 'auto' }} />
+      <Link style={{ display: 'flex'}} to="/Home">
+        <img src={logo} style={{ width: '200px', height: 'auto' }} />
+      </Link>
     </div>
 
     <div style={{ flex: 1, gap: "20px", justifyContent: "flex-end", display: "flex", alignItems: "center" }}>
